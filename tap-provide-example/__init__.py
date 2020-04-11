@@ -54,6 +54,7 @@ def discover():
 
 def sync(config, state, catalog):
     """ Sync data from tap source """
+    """ TODO: this is where we would poll the data """
     # Loop over selected streams in catalog
     for stream in catalog.get_selected_streams(state):
         LOGGER.info("Syncing stream:" + stream.tap_stream_id)
